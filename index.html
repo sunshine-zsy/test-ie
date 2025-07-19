@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>pc-exam-student</title>
+    <script
+      defer="defer"
+      src="/js/chunk-vendors.4d91cb23.js"
+      type="module"
+    ></script>
+    <script defer="defer" src="/js/app.2c40663c.js" type="module"></script>
+    <link href="/css/chunk-vendors.d1ab1ef9.css" rel="stylesheet" />
+    <link href="/css/app.ba17528e.css" rel="stylesheet" />
+    <script
+      defer="defer"
+      src="/js/chunk-vendors-legacy.800d199e.js"
+      nomodule
+    ></script>
+    <script defer="defer" src="/js/app-legacy.d7d867f2.js" nomodule></script>
+  </head>
+  <body>
+    <noscript
+      ><strong
+        >We're sorry but pc-exam-student doesn't work properly without
+        JavaScript enabled. Please enable it to continue.</strong
+      ></noscript
+    >
+    <div id="app"></div>
+    <script>
+      window.addEventListener("error", (event) => {
+        if (
+          event.message.includes(
+            "The message port closed before a response was received"
+          ) ||
+          event.message.includes("Extension context invalidated")
+        ) {
+          event.preventDefault();
+          return false;
+        }
+      });
+
+      window.addEventListener("unhandledrejection", (event) => {
+        if (
+          event.reason &&
+          event.reason.message &&
+          (event.reason.message.includes("The message port closed") ||
+            event.reason.message.includes("Extension context invalidated"))
+        ) {
+          event.preventDefault();
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>
